@@ -61,7 +61,7 @@ gtag('config', 'G-7VV6TG91BY');
       "sameAs": [
         "https://www.instagram.com/glowup.media.cl?igsh=OGd2cWdjbG93cmRp",
         "https://www.facebook.com/profile.php?id=61584064679211",
-        "https://wa.me/56964009015"
+        "https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F"
       ]
     },
     {
@@ -440,7 +440,7 @@ html{scroll-behavior:smooth;}
   content:"";
   position:absolute;
   left:0;
-  top:18px;
+  top:10px;
   bottom:18px;
   width:4px;
   border-radius:999px;
@@ -686,7 +686,7 @@ h1,h2,h3,h4,h5,h6{
 .elementor-29 .elementor-element.elementor-element-bb6ae0c .elementor-image-box-wrapper::before{
   position:absolute;
   left:18px;
-  top:18px;
+  top:10px;
   width:32px;
   height:32px;
   border-radius:11px;
@@ -2132,10 +2132,12 @@ body{overflow-x:hidden;}
 #negocios .e-con-inner{max-width:1100px !important;}
 .gum-client-logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:26px;align-items:center;margin-top:24px;}
 .gum-client-logo{display:flex;align-items:center;justify-content:center;}
-.gum-client-logo img{width:140px;height:140px;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 10px 26px rgba(15,23,42,.10);transition:transform .25s ease, box-shadow .25s ease;}
-.gum-client-logo img:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(15,23,42,.14);}
+.gum-client-logo__link{display:inline-flex;align-items:center;justify-content:center;width:140px;height:140px;border-radius:50%;background:transparent !important;box-shadow:none !important;outline:none !important;overflow:hidden;-webkit-tap-highlight-color:transparent;tap-highlight-color:transparent;}
+.gum-client-logo__link:focus,.gum-client-logo__link:active,.gum-client-logo__link:hover{background:transparent !important;box-shadow:none !important;outline:none !important;}
+.gum-client-logo img{display:block;width:140px;height:140px;object-fit:contain;border-radius:50%;background:#fff;box-shadow:0 10px 26px rgba(15,23,42,.10);transition:transform .25s ease, box-shadow .25s ease;}
+.gum-client-logo img:hover,.gum-client-logo__link:hover img,.gum-client-logo__link:active img,.gum-client-logo__link:focus img{transform:translateY(-4px) scale(1.02);box-shadow:0 16px 32px rgba(15,23,42,.14);}
 .gum-clientes-title{text-align:center;font-size:clamp(28px,3vw,36px);line-height:1.15;font-weight:800;margin:0;color:#153f4a;letter-spacing:-.02em;}
-@media (max-width:767px){#comotrabajamos{padding-top:20px !important;}.gum-client-logos{grid-template-columns:repeat(2,minmax(120px,1fr));gap:20px;}.gum-client-logo img{width:122px;height:122px;}}
+@media (max-width:767px){#comotrabajamos{padding-top:20px !important;}.gum-client-logos{grid-template-columns:repeat(2,minmax(120px,1fr));gap:20px;}.gum-client-logo__link{width:122px;height:122px;}.gum-client-logo img{width:122px;height:122px;}}
 </style>
 <style>
 /* Ajuste margen sección como trabajamos */
@@ -2236,8 +2238,8 @@ object-position:center 25%;
   }
 
   #ast-mobile-header .site-primary-header-wrap{
-    min-height:72px !important;
-    padding:0 18px !important;
+    min-height:58px !important;
+    padding:0 14px !important;
   }
 
   #ast-mobile-header .site-header-primary-section-left{
@@ -2253,8 +2255,8 @@ object-position:center 25%;
 
   #ast-mobile-header [data-section="section-header-mobile-trigger"]{
     position:fixed !important;
-    top:18px;
-    right:18px;
+    top:10px;
+    right:14px;
     z-index:100001;
     margin:0 !important;
     pointer-events:auto;
@@ -2266,8 +2268,8 @@ object-position:center 25%;
 
   #ast-mobile-header [data-section="section-header-mobile-trigger"] .ast-mobile-menu-trigger-outline,
   #ast-mobile-header [data-section="section-header-mobile-trigger"] .ast-mobile-menu-trigger-minimal{
-    width:58px !important;
-    height:58px !important;
+    width:46px !important;
+    height:46px !important;
     border-radius:999px !important;
     background:linear-gradient(135deg,#1B9C85,#178E79) !important;
     border:none !important;
@@ -2280,8 +2282,8 @@ object-position:center 25%;
 
   #ast-mobile-header [data-section="section-header-mobile-trigger"] .mobile-menu-toggle-icon .ast-mobile-svg,
   #ast-mobile-header [data-section="section-header-mobile-trigger"] .mobile-menu-toggle-icon svg{
-    width:24px !important;
-    height:24px !important;
+    width:20px !important;
+    height:20px !important;
     fill:#fff !important;
   }
 
@@ -2310,15 +2312,15 @@ object-position:center 25%;
     position:fixed !important;
     top:0;
     right:0;
-    width:min(84vw,360px) !important;
+    width:min(78vw,320px) !important;
     height:100vh !important;
     margin:0 !important;
-    padding:88px 18px 28px !important;
+    padding:64px 14px 20px !important;
     background:rgba(255,255,255,.14) !important;
     backdrop-filter:blur(18px) saturate(140%);
     -webkit-backdrop-filter:blur(18px) saturate(140%);
     border-left:1px solid rgba(255,255,255,.24);
-    border-radius:28px 0 0 28px;
+    border-radius:22px 0 0 22px;
     box-shadow:-22px 0 54px rgba(15,23,42,.22);
     overflow-y:auto;
     transform:translateX(110%);
@@ -2358,9 +2360,9 @@ object-position:center 25%;
   #ast-mobile-header .ast-mobile-header-content .main-header-menu{
     display:flex;
     flex-direction:column;
-    gap:12px;
+    gap:8px;
     padding:0 !important;
-    margin:0 0 22px 0 !important;
+    margin:0 0 14px 0 !important;
   }
 
   #ast-mobile-header .ast-mobile-header-content .main-header-menu > .menu-item{
@@ -2370,12 +2372,12 @@ object-position:center 25%;
   #ast-mobile-header .ast-mobile-header-content .main-header-menu > .menu-item > .menu-link{
     display:flex;
     align-items:center;
-    min-height:58px;
-    padding:0 18px !important;
-    border-radius:18px !important;
+    min-height:48px;
+    padding:0 14px !important;
+    border-radius:14px !important;
     background:rgba(255,255,255,.72) !important;
     color:#0F172A !important;
-    font-size:16px !important;
+    font-size:14px !important;
     font-weight:800 !important;
     letter-spacing:.01em;
     box-shadow:0 10px 24px rgba(15,23,42,.08);
@@ -2389,10 +2391,10 @@ object-position:center 25%;
   }
 
   #ast-mobile-header .ast-mobile-header-content .menu-item.menu-item-has-children > .ast-menu-toggle{
-    right:14px !important;
-    top:14px !important;
-    width:32px;
-    height:32px;
+    right:10px !important;
+    top:8px !important;
+    width:28px;
+    height:28px;
     border-radius:999px;
     background:#eef5f4 !important;
   }
@@ -2403,15 +2405,15 @@ object-position:center 25%;
   }
 
   .gum-mobile-header{
-    margin-bottom:18px;
-    padding-right:56px;
+    margin-bottom:12px;
+    padding-right:44px;
   }
   .gum-mobile-title{
     color:#ffffff;
-    font-size:30px;
+    font-size:24px;
     font-weight:800;
     line-height:1.05;
-    margin:0 0 8px 0;
+    margin:0 0 4px 0;
     text-shadow:0 8px 22px rgba(15,23,42,.28);
   }
   .gum-mobile-subtitle{
@@ -2518,9 +2520,9 @@ object-position:center 25%;
 <style>
 /* ajustes finales menu movil */
 .gum-mobile-social-panel{
-  margin-top: 10px !important;
-  margin-bottom: 110px !important;
-  padding: 18px 18px 44px !important;
+  margin-top: 8px !important;
+  margin-bottom: 72px !important;
+  padding: 14px 14px 26px !important;
   background: rgba(255,255,255,.12) !important;
   border: 1px solid rgba(255,255,255,.18) !important;
   box-shadow: 0 12px 30px rgba(15,23,42,.12) !important;
@@ -2545,10 +2547,10 @@ object-position:center 25%;
 #ast-mobile-header .gum-mobile-header{position:relative;}
 #ast-mobile-header .gum-mobile-menu-close{
   position:fixed;
-  top:18px;
-  right:18px;
-  width:58px;
-  height:58px;
+  top:10px;
+  right:14px;
+  width:46px;
+  height:46px;
   border-radius:999px;
   border:1px solid rgba(255,255,255,.24);
   display:flex;
@@ -2568,8 +2570,8 @@ object-position:center 25%;
   transform:scale(1.05);
 }
 #ast-mobile-header .gum-mobile-menu-close svg{
-  width:24px;
-  height:24px;
+  width:20px;
+  height:20px;
   display:block;
   overflow:visible;
 }
@@ -2587,7 +2589,11 @@ object-position:center 25%;
 a, button, .menu-item a{
 transition:all .25s ease;
 }
-.menu-item a:hover, button:hover{
+.menu-item a:hover{
+transform:translateY(-2px);
+box-shadow:none;
+}
+button:hover{
 transform:translateY(-2px);
 box-shadow:0 6px 14px rgba(0,0,0,0.15);
 }
@@ -2629,6 +2635,11 @@ display:flex;
 align-items:center;
 gap:12px;
 font-weight:500;
+color:#e5e5e5;
+background:none !important;
+box-shadow:none !important;
+border:none !important;
+position:relative;
 }
 
 /* smooth iphone-like animation */
@@ -2636,11 +2647,12 @@ font-weight:500;
 transition:all .25s cubic-bezier(.25,.8,.25,1);
 }
 
-/* glow effect on hover / touch */
+/* hover elegante sin fondo tipo botón */
 .menu-item a:hover{
-transform:translateY(-2px) scale(1.02);
-box-shadow:0 8px 18px rgba(0,0,0,0.18);
-background:rgba(255,255,255,0.9);
+transform:translateY(-2px);
+color:#ffffff;
+box-shadow:none !important;
+background:none !important;
 }
 
 /* icon subtle animation */
@@ -2650,6 +2662,24 @@ transition:transform .25s ease;
 
 .menu-item a:hover::before{
 transform:scale(1.2);
+}
+
+/* línea animada debajo solo en web */
+@media (min-width: 922px){
+  .ast-desktop .main-header-menu > .menu-item > .menu-link::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#00c3ff;
+    transition:width .3s ease;
+  }
+
+  .ast-desktop .main-header-menu > .menu-item > .menu-link:hover::after{
+    width:100%;
+  }
 }
 
 /* smoother hamburger button transition */
@@ -4120,8 +4150,8 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="site-header-primary-section-right-center site-header-section ast-flex ast-grid-right-center-section">
 </div>
 <div class="ast-builder-layout-element ast-flex site-header-focus-item ast-header-button-1" data-section="section-hb-button-1">
-<div class="ast-builder-button-wrap ast-builder-button-size-"><a aria-label="Hablemos por WhatsApp" class="ast-custom-button-link" href="https://wa.me/56964009015" rel="noopener noreferrer" role="button" target="_blank">
-</a><a class="menu-link" href="https://wa.me/56964009015" rel="noopener noreferrer" target="_blank">Hablemos</a></div> </div>
+<div class="ast-builder-button-wrap ast-builder-button-size-"><a aria-label="Hablemos por WhatsApp" class="ast-custom-button-link" href="https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F" rel="noopener noreferrer" role="button" target="_blank">
+</a><a class="menu-link" href="https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F" rel="noopener noreferrer" target="_blank">Hablemos</a></div> </div>
 </div>
 </div>
 </div>
@@ -4206,7 +4236,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="elementor-element elementor-element-2ff8a70 elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="2ff8a70" data-widget_type="button.default">
 <div class="elementor-widget-container">
 <div class="elementor-button-wrapper">
-<a class="elementor-button elementor-button-link elementor-size-sm" href="https://wa.me/56964009015" rel="noopener" target="_blank">Contáctanos por WhatsApp
+<a class="elementor-button elementor-button-link elementor-size-sm" href="https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F" rel="noopener" target="_blank">Contáctanos por WhatsApp
 
 </a>
 </div>
@@ -4414,7 +4444,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <video muted="" playsinline="" poster="assets/images/Banner.webp" preload="metadata" webkit-playsinline="">
 <source src="assets/videos/testimonio-1.mp4" type="video/mp4"/>
 </video>
-<button aria-label="Reproducir o pausar video" class="gum-video-hitarea" type="button"><span class="gum-video-hitarea__icon">▶</span></button><button aria-label="Activar sonido" class="gum-video-sound" type="button">🔊</button><a aria-label="Hablar por WhatsApp" class="gum-video-whatsapp" href="https://wa.me/56964009015" rel="noopener noreferrer" target="_blank">🟢</a></div>
+<button aria-label="Reproducir o pausar video" class="gum-video-hitarea" type="button"><span class="gum-video-hitarea__icon">▶</span></button><button aria-label="Activar sonido" class="gum-video-sound" type="button">🔊</button><a aria-label="Hablar por WhatsApp" class="gum-video-whatsapp" href="https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F" rel="noopener noreferrer" target="_blank">🟢</a></div>
 <div class="gum-video-card__meta"><p class="gum-video-card__name">Neurokids</p><p class="gum-video-card__sub">Centro clínico</p><p class="gum-video-card__quote">Testimonio real en video</p><div class="gum-video-card__badge">★★★★★ Cliente verificado</div></div>
 </article>
 <article class="gum-video-card">
@@ -4422,7 +4452,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <video muted="" playsinline="" poster="assets/images/Banner.webp" preload="metadata" webkit-playsinline="">
 <source src="assets/videos/testimonio-2.mp4" type="video/mp4"/>
 </video>
-<button aria-label="Reproducir o pausar video" class="gum-video-hitarea" type="button"><span class="gum-video-hitarea__icon">▶</span></button><button aria-label="Activar sonido" class="gum-video-sound" type="button">🔊</button><a aria-label="Hablar por WhatsApp" class="gum-video-whatsapp" href="https://wa.me/56964009015" rel="noopener noreferrer" target="_blank">🟢</a></div>
+<button aria-label="Reproducir o pausar video" class="gum-video-hitarea" type="button"><span class="gum-video-hitarea__icon">▶</span></button><button aria-label="Activar sonido" class="gum-video-sound" type="button">🔊</button><a aria-label="Hablar por WhatsApp" class="gum-video-whatsapp" href="https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F" rel="noopener noreferrer" target="_blank">🟢</a></div>
 <div class="gum-video-card__meta"><p class="gum-video-card__name">The Happy Club</p><p class="gum-video-card__sub">Hamburguesería</p><p class="gum-video-card__quote">Experiencia y resultados reales</p><div class="gum-video-card__badge">★★★★★ Cliente verificado</div></div>
 </article>
 <article class="gum-video-card">
@@ -4430,7 +4460,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <video muted="" playsinline="" poster="assets/images/Banner.webp" preload="metadata" webkit-playsinline="">
 <source src="assets/videos/testimonio-3.mp4" type="video/mp4"/>
 </video>
-<button aria-label="Reproducir o pausar video" class="gum-video-hitarea" type="button"><span class="gum-video-hitarea__icon">▶</span></button><button aria-label="Activar sonido" class="gum-video-sound" type="button">🔊</button><a aria-label="Hablar por WhatsApp" class="gum-video-whatsapp" href="https://wa.me/56964009015" rel="noopener noreferrer" target="_blank">🟢</a></div>
+<button aria-label="Reproducir o pausar video" class="gum-video-hitarea" type="button"><span class="gum-video-hitarea__icon">▶</span></button><button aria-label="Activar sonido" class="gum-video-sound" type="button">🔊</button><a aria-label="Hablar por WhatsApp" class="gum-video-whatsapp" href="https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F" rel="noopener noreferrer" target="_blank">🟢</a></div>
 <div class="gum-video-card__meta"><p class="gum-video-card__name">Mini-Consentidas</p><p class="gum-video-card__sub">Emprendimiento local</p><p class="gum-video-card__quote">Proceso real junto a GlowUp</p><div class="gum-video-card__badge">★★★★★ Cliente verificado</div></div>
 </article>
 </div>
@@ -4475,7 +4505,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="elementor-element elementor-element-c4faa7f elementor-widget elementor-widget-button" data-e-type="widget" data-element_type="widget" data-id="c4faa7f" data-widget_type="button.default">
 <div class="elementor-widget-container">
 <div class="elementor-button-wrapper">
-<a class="elementor-button elementor-button-link elementor-size-sm" href="https://wa.me/56964009015" rel="noopener" target="_blank">Hablar por WhatsApp</a>
+<a class="elementor-button elementor-button-link elementor-size-sm" href="https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F" rel="noopener" target="_blank">Hablar por WhatsApp</a>
 </div>
 </div>
 </div>
@@ -4529,7 +4559,7 @@ var astra = {"break_point":"921","isRtl":"","is_scroll_to_id":"1","is_scroll_to_
 <script id="elementor-frontend-js-before">
 var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"4.0.1","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"nested-elements":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_widget_creation":true,"import-export-customization":true},"urls":{"assets":"\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"\/wp-admin\/admin-ajax.php","uploadUrl":"\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"7ec86f6e74","atomicFormsSendForm":"32ec6597eb"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":29,"title":"Home%20-%20glowupmedia","excerpt":"","featuredImage":false}};</script>
 <script id="elementor-frontend-js" src="/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=4.0.1"></script>
-<a aria-label="Hablar por WhatsApp" class="gum-whatsapp-float" href="https://wa.me/56964009015" rel="noopener noreferrer" target="_blank">
+<a aria-label="Hablar por WhatsApp" class="gum-whatsapp-float" href="https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F" rel="noopener noreferrer" target="_blank">
 <svg aria-hidden="true" viewbox="0 0 32 32"><path d="M19.11 17.32c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.07-.3-.15-1.28-.47-2.43-1.5-.9-.8-1.5-1.8-1.67-2.1-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.5h-.57c-.2 0-.52.07-.8.37-.27.3-1.05 1.02-1.05 2.5s1.07 2.9 1.22 3.1c.15.2 2.1 3.2 5.08 4.48.71.3 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.35zM16.2 3.2a12.7 12.7 0 0 0-10.9 19.22L3.2 28.8l6.56-2.06A12.8 12.8 0 1 0 16.2 3.2zm0 23.2c-2 0-3.96-.54-5.66-1.56l-.4-.24-3.9 1.23 1.27-3.8-.26-.4a10.83 10.83 0 1 1 8.95 4.77z"></path></svg>
 </a>
 <script>
@@ -4654,7 +4684,7 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 <script id="gum-final-video-script">
 (function(){
   const videos=[...document.querySelectorAll('#clientes .gum-video-card video')];
-  const whatsappLink='https://wa.me/56964009015';
+  const whatsappLink='https://wa.me/56964009015?text=Hola%2C%20buenas.%20Me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios%20y%20valores.%20%C2%BFPodr%C3%ADan%20orientarme%3F';
   const pauseOthers=(active)=>videos.forEach(v=>{if(v!==active){v.pause();const m=v.closest('.gum-video-media'); if(m) m.classList.remove('is-playing'); const s=m?.querySelector('.gum-video-sound'); if(s) s.textContent=v.muted?'🔇':'🔊';}});
   const sync=(video)=>{
     const media=video.closest('.gum-video-media');
@@ -4716,10 +4746,10 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
   #ast-mobile-header .ast-mobile-header-content{padding-bottom:44px !important;}
   #ast-mobile-header .gum-mobile-menu-close{
     position:fixed;
-    top:18px;
-    right:18px;
-    width:58px;
-    height:58px;
+    top:10px;
+    right:14px;
+    width:46px;
+    height:46px;
     border-radius:999px;
     border:1px solid rgba(255,255,255,.24);
     display:flex;
@@ -4739,8 +4769,8 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
     transform:scale(1.05);
   }
   #ast-mobile-header .gum-mobile-menu-close svg{
-    width:24px;
-    height:24px;
+    width:20px;
+    height:20px;
     display:block;
     overflow:visible;
   }
@@ -5670,7 +5700,7 @@ color:#243c3a !important;
       grid-template-columns:1fr;
       border-radius:24px;
       padding:16px;
-      gap:12px;
+      gap:8px;
     }
     .gum-hero-stat-item{
       border-radius:18px;
@@ -5860,6 +5890,47 @@ margin-top:-60px !important;
     margin-top:0 !important;
     padding-top:18px !important;
     padding-bottom:8px !important;
+  }
+}
+</style>
+
+<style id="gum-desktop-nav-no-buttons-fix">
+@media (min-width: 922px){
+  #ast-desktop-header .main-header-menu,
+  #ast-desktop-header .main-header-menu > .menu-item,
+  #ast-desktop-header .main-header-menu > .menu-item::before,
+  #ast-desktop-header .main-header-menu > .menu-item::after,
+  #ast-desktop-header .main-header-menu > .menu-item > .menu-link,
+  #ast-desktop-header .main-header-menu > .menu-item > .menu-link::before,
+  #ast-desktop-header .main-header-menu > .menu-item > .menu-link::after{
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
+    outline: 0 !important;
+  }
+
+  #ast-desktop-header .main-header-menu > .menu-item{
+    padding: 0 !important;
+    margin: 0 6px !important;
+    border-radius: 0 !important;
+    transform: none !important;
+  }
+
+  #ast-desktop-header .main-header-menu > .menu-item > .menu-link{
+    padding: 0 16px !important;
+    min-height: auto !important;
+    height: auto !important;
+    line-height: 1em !important;
+    border-radius: 0 !important;
+    transform: none !important;
+  }
+
+  #ast-desktop-header .main-header-menu > .menu-item > .menu-link:hover,
+  #ast-desktop-header .main-header-menu > .menu-item.current-menu-item > .menu-link,
+  #ast-desktop-header .main-header-menu > .menu-item.current-menu-ancestor > .menu-link{
+    background: transparent !important;
+    box-shadow: none !important;
+    border: 0 !important;
   }
 }
 </style>
