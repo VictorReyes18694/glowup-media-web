@@ -2227,6 +2227,13 @@ object-position:center 25%;
     top:26px !important;
   }
 
+  body.admin-bar #ast-mobile-header [data-section="section-header-mobile-trigger"] .ast-button-wrap,
+  body.admin-bar #ast-mobile-header [data-section="section-header-mobile-trigger"] .main-header-menu-toggle,
+  body.admin-bar #ast-mobile-header [data-section="section-header-mobile-trigger"] .ast-mobile-menu-trigger-outline,
+  body.admin-bar #ast-mobile-header [data-section="section-header-mobile-trigger"] .ast-mobile-menu-trigger-minimal{
+    top:26px !important;
+  }
+
   #masthead,
   #ast-mobile-header,
   #ast-mobile-header .ast-main-header-wrap,
@@ -2255,15 +2262,42 @@ object-position:center 25%;
 
   #ast-mobile-header [data-section="section-header-mobile-trigger"]{
     position:fixed !important;
-    top:10px;
-    right:14px;
-    z-index:100001;
+    top:10px !important;
+    right:14px !important;
+    left:auto !important;
+    bottom:auto !important;
+    z-index:100001 !important;
     margin:0 !important;
-    pointer-events:auto;
+    pointer-events:auto !important;
+    transform:none !important;
+    -webkit-transform:none !important;
+    will-change:transform;
   }
 
   #ast-mobile-header [data-section="section-header-mobile-trigger"] .ast-button-wrap{
     display:block;
+    position:fixed !important;
+    top:10px !important;
+    right:14px !important;
+    left:auto !important;
+    bottom:auto !important;
+    margin:0 !important;
+    z-index:100001 !important;
+    transform:none !important;
+    -webkit-transform:none !important;
+  }
+
+  #ast-mobile-header [data-section="section-header-mobile-trigger"] .main-header-menu-toggle,
+  #ast-mobile-header [data-section="section-header-mobile-trigger"] .ast-mobile-menu-trigger-outline,
+  #ast-mobile-header [data-section="section-header-mobile-trigger"] .ast-mobile-menu-trigger-minimal{
+    position:fixed !important;
+    top:10px !important;
+    right:14px !important;
+    left:auto !important;
+    bottom:auto !important;
+    z-index:100002 !important;
+    transform:none !important;
+    -webkit-transform:none !important;
   }
 
   #ast-mobile-header [data-section="section-header-mobile-trigger"] .ast-mobile-menu-trigger-outline,
@@ -2545,44 +2579,6 @@ object-position:center 25%;
 }
 
 #ast-mobile-header .gum-mobile-header{position:relative;}
-#ast-mobile-header .gum-mobile-menu-close{
-  position:fixed;
-  top:10px;
-  right:14px;
-  width:46px;
-  height:46px;
-  border-radius:999px;
-  border:1px solid rgba(255,255,255,.24);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:rgba(255,255,255,.12);
-  color:#ffffff;
-  box-shadow:0 12px 28px rgba(15,23,42,.22);
-  backdrop-filter:blur(12px);
-  -webkit-backdrop-filter:blur(12px);
-  cursor:pointer;
-  z-index:100002;
-  transition:all .25s ease;
-}
-#ast-mobile-header .gum-mobile-menu-close:hover{
-  background:rgba(255,255,255,.18);
-  transform:scale(1.05);
-}
-#ast-mobile-header .gum-mobile-menu-close svg{
-  width:20px;
-  height:20px;
-  display:block;
-  overflow:visible;
-}
-#ast-mobile-header .gum-mobile-menu-close svg path{
-  stroke:#ffffff !important;
-  stroke-width:2.8 !important;
-  fill:none !important;
-  stroke-linecap:round;
-  stroke-linejoin:round;
-  opacity:1 !important;
-}
 </style>
 <style>
 /* Hover elegante en botones del menú */
@@ -4112,7 +4108,82 @@ document.addEventListener('DOMContentLoaded', function () {
 .menu-item + .menu-item {
     margin-top: 10px;
 }
-</style></head>
+</style>
+<style>
+/* BOTON MENU FIXED MOBILE */
+.menu-toggle{
+position:fixed!important;
+top:15px;
+right:15px;
+z-index:99999;
+width:50px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(8px);
+border-radius:50%;
+border:1px solid rgba(255,255,255,0.2);
+}
+.menu-toggle span,.menu-toggle i{
+font-size:20px;
+line-height:1;
+}
+header,.navbar{
+overflow:visible!important;
+}
+@media(min-width:769px){
+.menu-toggle{position:absolute!important;}
+}
+</style>
+
+
+<style id="gum-floating-mobile-trigger-override">
+@media (max-width: 921px){
+  #gum-floating-mobile-trigger{
+    position:fixed !important;
+    top:14px !important;
+    right:14px !important;
+    width:52px !important;
+    height:52px !important;
+    border:none !important;
+    border-radius:999px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    padding:0 !important;
+    margin:0 !important;
+    background:rgba(255,255,255,.16) !important;
+    backdrop-filter:blur(10px) !important;
+    -webkit-backdrop-filter:blur(10px) !important;
+    box-shadow:0 12px 28px rgba(15,23,42,.24) !important;
+    border:1px solid rgba(255,255,255,.22) !important;
+    color:#fff !important;
+    z-index:2147483647 !important;
+    cursor:pointer !important;
+  }
+  #gum-floating-mobile-trigger svg{
+    width:22px !important;
+    height:22px !important;
+    display:block !important;
+    margin:0 auto !important;
+    fill:currentColor !important;
+    transform:translateX(.5px) translateY(.5px) !important;
+  }
+  #gum-floating-mobile-trigger.is-open{
+    background:rgba(255,255,255,.22) !important;
+  }
+  #ast-mobile-header [data-section="section-header-mobile-trigger"]{
+    opacity:0 !important;
+    pointer-events:none !important;
+  }
+}
+@media (min-width: 922px){
+  #gum-floating-mobile-trigger{display:none !important;}
+}
+</style>
+</head>
 <body class="home wp-singular page-template-default page page-id-29 wp-embed-responsive wp-theme-astra surerank-1.6.6 ehf-template-astra ehf-stylesheet-astra ast-desktop ast-page-builder-template ast-no-sidebar astra-4.12.6 ast-single-post ast-inherit-site-logo-transparent ast-theme-transparent-header ast-hfb-header elementor-default elementor-kit-98 elementor-page elementor-page-29" itemscope="itemscope" itemtype="https://schema.org/WebPage">
 <a class="skip-link screen-reader-text" href="#content">
 		Skip to content</a>
@@ -4191,11 +4262,6 @@ document.addEventListener('DOMContentLoaded', function () {
 <div class="gum-mobile-header">
 <div class="gum-mobile-title">Menú</div>
 <div class="gum-mobile-subtitle">GlowUpMedia</div>
-<button aria-label="Cerrar menú" class="gum-mobile-menu-close" type="button">
-<svg aria-hidden="true" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-<path d="M6 6L18 18M18 6L6 18"></path>
-</svg>
-</button>
 </div>
 <div class="ast-builder-menu-mobile ast-builder-menu ast-builder-menu-mobile-focus-item ast-builder-layout-element site-header-focus-item" data-section="section-header-mobile-menu">
 <div class="ast-main-header-bar-alignment"><div class="main-header-bar-navigation"><nav aria-label="Site Navigation: Primary Menu" class="site-navigation ast-flex-grow-1 navigation-accessibility site-header-focus-item" id="ast-mobile-site-navigation" itemscope="itemscope" itemtype="https://schema.org/SiteNavigationElement"><div class="main-navigation"><ul class="main-header-menu ast-nav-menu ast-flex submenu-with-border astra-menu-animation-fade stack-on-mobile" id="ast-hf-mobile-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36 gum-menu-item-nosotros" id="menu-item-36"><a class="menu-link" href="#nosotros"><span>👥 </span><span>Nosotros</span></a></li>
@@ -4836,9 +4902,12 @@ var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false
 document.addEventListener('DOMContentLoaded', function () {
   var mobileHeader = document.querySelector('#ast-mobile-header');
   var menuPanel = document.querySelector('#ast-mobile-header .ast-mobile-header-content');
-  var triggerButton = document.querySelector('#ast-mobile-header .main-header-menu-toggle');
+  var originalTrigger = document.querySelector('#ast-mobile-header .main-header-menu-toggle');
   var closeButton = document.querySelector('#ast-mobile-header .gum-mobile-menu-close');
-  if (!mobileHeader || !menuPanel || !triggerButton) return;
+  if (!mobileHeader || !menuPanel || !originalTrigger) return;
+
+  var triggerButton = originalTrigger.cloneNode(true);
+  originalTrigger.parentNode.replaceChild(triggerButton, originalTrigger);
 
   function isMenuOpen() {
     return document.body.classList.contains('ast-main-header-nav-open') ||
@@ -4850,11 +4919,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var open = isMenuOpen();
     triggerButton.setAttribute('aria-expanded', open ? 'true' : 'false');
     triggerButton.classList.toggle('toggled', open);
+    mobileHeader.classList.toggle('gum-menu-open', open);
   }
 
   function openMenu() {
-    document.body.classList.add('ast-main-header-nav-open');
-    document.documentElement.classList.add('ast-main-header-nav-open');
+    document.body.classList.add('ast-main-header-nav-open', 'ast-popup-nav-open');
+    document.documentElement.classList.add('ast-main-header-nav-open', 'ast-popup-nav-open');
     menuPanel.classList.add('active');
     syncTriggerState();
   }
@@ -4868,6 +4938,18 @@ document.addEventListener('DOMContentLoaded', function () {
     syncTriggerState();
   }
 
+  function toggleMenu(event) {
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+    if (isMenuOpen()) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
+  }
+
   if (closeButton) {
     closeButton.addEventListener('click', function (event) {
       event.preventDefault();
@@ -4876,16 +4958,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  triggerButton.addEventListener('click', function () {
-    setTimeout(function(){
-      var expanded = triggerButton.getAttribute('aria-expanded') === 'true';
-      if (expanded) {
-        openMenu();
-      } else {
-        closeMenu();
-      }
-    }, 30);
-  });
+  triggerButton.addEventListener('click', toggleMenu);
+  triggerButton.addEventListener('touchend', function(event){
+    event.preventDefault();
+  }, { passive: false });
 
   menuPanel.querySelectorAll('a[href^="#"]').forEach(function (link) {
     link.addEventListener('click', function () {
@@ -4896,7 +4972,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('click', function (event) {
     if (!isMenuOpen()) return;
     var clickedInsidePanel = event.target.closest('#ast-mobile-header .ast-mobile-header-content');
-    var clickedTrigger = event.target.closest('#ast-mobile-header .main-header-menu-toggle');
+    var clickedTrigger = event.target.closest('#ast-mobile-header .main-header-menu-toggle, #gum-floating-mobile-trigger');
     if (!clickedInsidePanel && !clickedTrigger) {
       closeMenu();
     }
@@ -4905,7 +4981,7 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('touchstart', function (event) {
     if (!isMenuOpen()) return;
     var touchedInsidePanel = event.target.closest('#ast-mobile-header .ast-mobile-header-content');
-    var touchedTrigger = event.target.closest('#ast-mobile-header .main-header-menu-toggle');
+    var touchedTrigger = event.target.closest('#ast-mobile-header .main-header-menu-toggle, #gum-floating-mobile-trigger');
     if (!touchedInsidePanel && !touchedTrigger) {
       closeMenu();
     }
@@ -5934,5 +6010,163 @@ margin-top:-60px !important;
   }
 }
 </style>
+
+<script id="gum-floating-mobile-trigger-script">
+(function(){
+  function getRealTrigger(){
+    return document.querySelector('#ast-mobile-header .main-header-menu-toggle') || document.querySelector('.main-header-menu-toggle');
+  }
+
+  function getCloseTrigger(){
+    return document.querySelector('#ast-mobile-header .menu-toggle-close, .ast-mobile-popup-drawer .menu-toggle-close, .ast-mobile-popup-drawer .ast-mobile-popup-close');
+  }
+
+  function getPanel(){
+    return document.querySelector('#ast-mobile-header .ast-mobile-header-content');
+  }
+
+  function isPanelVisible(){
+    var panel = getPanel();
+    if(!panel) return false;
+    return panel.classList.contains('active') ||
+           document.body.classList.contains('ast-main-header-nav-open') ||
+           document.body.classList.contains('ast-popup-nav-open');
+  }
+
+  function isMenuOpen(){
+    var real = getRealTrigger();
+    var header = document.querySelector('#ast-mobile-header');
+    if(header && header.classList.contains('gum-menu-open')) return true;
+    if(isPanelVisible()) return true;
+    return !!(real && real.getAttribute('aria-expanded') === 'true');
+  }
+
+  function hardSyncClosed(){
+    var real = getRealTrigger();
+    var panel = getPanel();
+    if(real) real.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('ast-main-header-nav-open', 'ast-popup-nav-open');
+    document.documentElement.classList.remove('ast-main-header-nav-open', 'ast-popup-nav-open');
+    document.querySelectorAll('.ast-mobile-popup-drawer,.ast-mobile-popup-content,.ast-mobile-header-content').forEach(function(el){
+      el.classList.remove('active');
+    });
+    if(panel) panel.classList.remove('active');
+  }
+
+  function syncState(btn, forcedOpen){
+    var open = (typeof forcedOpen === 'boolean') ? forcedOpen : isMenuOpen();
+    btn.classList.toggle('is-open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    btn.innerHTML = open
+      ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.3 5.71 12 12l6.3 6.29-1.41 1.41L10.59 13.41 4.29 19.71 2.88 18.3 9.17 12 2.88 5.71 4.29 4.29l6.3 6.3 6.29-6.3z"></path></svg>'
+      : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v2H4V7zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path></svg>';
+  }
+
+  function applyOpenState(){
+    var real = getRealTrigger();
+    var panel = getPanel();
+    if(real) real.setAttribute('aria-expanded', 'true');
+    if(panel) panel.classList.add('active');
+    document.body.classList.add('ast-main-header-nav-open', 'ast-popup-nav-open');
+    document.documentElement.classList.add('ast-main-header-nav-open', 'ast-popup-nav-open');
+  }
+
+  function applyClosedState(){
+    var real = getRealTrigger();
+    var panel = getPanel();
+    if(real) real.setAttribute('aria-expanded', 'false');
+    document.body.classList.remove('ast-main-header-nav-open', 'ast-popup-nav-open');
+    document.documentElement.classList.remove('ast-main-header-nav-open', 'ast-popup-nav-open');
+    document.querySelectorAll('.ast-mobile-popup-drawer,.ast-mobile-popup-content,.ast-mobile-header-content').forEach(function(el){
+      el.classList.remove('active');
+    });
+    if(panel) panel.classList.remove('active');
+  }
+
+  function openMenu(btn){
+    applyOpenState();
+    setTimeout(function(){
+      syncState(btn);
+    }, 30);
+  }
+
+  function closeMenu(btn){
+    applyClosedState();
+    hardSyncClosed();
+    syncState(btn, false);
+    [0, 60, 140, 260].forEach(function(delay){
+      setTimeout(function(){
+        hardSyncClosed();
+        syncState(btn, false);
+      }, delay);
+    });
+  }
+
+  function ensureButton(){
+    var existing = document.getElementById('gum-floating-mobile-trigger');
+    if(existing) return existing;
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.id = 'gum-floating-mobile-trigger';
+    btn.setAttribute('aria-label', 'Abrir menú');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.innerHTML = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16v2H4V7zm0 5h16v2H4v-2zm0 5h16v2H4v-2z"></path></svg>';
+    btn.addEventListener('touchstart', function(e){
+      e.stopPropagation();
+    }, {passive:true});
+    btn.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      if(isPanelVisible()){
+        closeMenu(btn);
+      } else {
+        openMenu(btn);
+      }
+    });
+    document.body.appendChild(btn);
+    return btn;
+  }
+
+  function init(){
+    var btn = ensureButton();
+    syncState(btn);
+
+    var observer = new MutationObserver(function(){
+      setTimeout(function(){ syncState(btn); }, 30);
+    });
+    observer.observe(document.body, {attributes:true, attributeFilter:['class']});
+
+    var panel = getPanel();
+    if(panel){
+      observer.observe(panel, {attributes:true, attributeFilter:['style','class']});
+    }
+
+    document.addEventListener('click', function(){
+      setTimeout(function(){
+        if(!isMenuOpen()) {
+          hardSyncClosed();
+          syncState(btn, false);
+          return;
+        }
+        syncState(btn, true);
+      }, 80);
+    }, true);
+
+    window.addEventListener('resize', function(){
+      setTimeout(function(){ syncState(btn); }, 30);
+    });
+    window.addEventListener('scroll', function(){
+      syncState(btn);
+    }, {passive:true});
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
 </body>
 </html>
